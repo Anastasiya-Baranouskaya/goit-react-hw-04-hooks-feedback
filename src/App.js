@@ -11,7 +11,7 @@ export default function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const changeFeedback = e => {
+  const addFeedback = e => {
     const { name } = e.target;
     switch (name) {
       case 'good':
@@ -43,7 +43,7 @@ export default function App() {
       <Section>
         <FeedbackOptions
           options={{ good, neutral, bad }}
-          onLeaveFeedback={changeFeedback}
+          onLeaveFeedback={addFeedback}
         />
       </Section>
       <Section title="Statistics">
