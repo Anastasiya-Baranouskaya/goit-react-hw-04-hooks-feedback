@@ -29,13 +29,11 @@ export default function App() {
   };
 
   const totalFeedback = () => {
-    const total = good + neutral + bad;
-    return total;
+    return good + neutral + bad;
   };
 
   const positiveFeedbackPercentage = () => {
-    const positiveFeedback = Math.round((good / totalFeedback()) * 100) + '%';
-    return positiveFeedback;
+    return Math.round((good / totalFeedback()) * 100) + '%';
   };
 
   return (
